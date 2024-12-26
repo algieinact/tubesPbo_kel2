@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PhoneBookController" spacing="10" padding="10">
+    <TableView fx:id="contactTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn text="Name" fx:id="nameColumn" />
+            <TableColumn text="Phone" fx:id="phoneColumn" />
+            <TableColumn text="Email" fx:id="emailColumn" />
+            <TableColumn text="Address" fx:id="addressColumn" />
+        </columns>
+    </TableView>
+    <HBox spacing="10">
+        <TextField fx:id="nameField" promptText="Name" />
+        <TextField fx:id="phoneField" promptText="Phone" />
+        <TextField fx:id="emailField" promptText="Email" />
+        <TextField fx:id="addressField" promptText="Address" />
+        <Button text="Add" onAction="#handleAdd" />
+        <Button text="Update" onAction="#handleUpdate" />
+        <Button text="Delete" onAction="#handleDelete" />
+    </HBox>
+</VBox>
